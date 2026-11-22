@@ -1,0 +1,26 @@
+% Sinh boi runners/make_paper3_tables.py -- dung sua tay.
+\begin{table}[t]
+\centering
+\caption{Degenerate runs (of five) when $C$ is selected separately
+on each run's own training split, on the original grid, with
+$N = N_{\text{train}} = N_{\text{test}}$. Q, L, P, R
+are the quantum, linear, degree-two polynomial and RBF kernels. At
+$N = 500$ the $\arg\max$ trap disappears, while the one-SE rule and
+class weighting can still return a constant classifier.}
+\label{tab:remedies}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lcccccccc}
+\toprule
+ & \multicolumn{4}{c}{$N = 100$} & \multicolumn{4}{c}{$N = 500$} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Selection & Q & L & P & R & Q & L & P & R \\
+\midrule
+binary $F_1$, $\arg\max$ & 2 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+binary $F_1$, one-SE rule & 2 & 1 & 1 & 1 & 0 & 1 & 2 & 0 \\
+binary $F_1$, balanced class weights & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+binary $F_1$, normal class positive & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+macro $F_1$, $\arg\max$ & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+MCC, $\arg\max$ & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

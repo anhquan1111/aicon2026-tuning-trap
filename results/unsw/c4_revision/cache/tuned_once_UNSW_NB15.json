@@ -1,0 +1,28 @@
+{
+ "QSVM_ZZ": {
+  "C": 1.0
+ },
+ "QSVM_Z": {
+  "C": 1.0
+ },
+ "SVM_Linear": {
+  "svc__C": 0.1
+ },
+ "SVM_Poly2": {
+  "svc__C": 0.3
+ },
+ "SVM_RBF": {
+  "svc__C": 0.1
+ },
+ "RandomForest": {
+  "n_estimators": 200,
+  "max_depth": 20,
+  "min_samples_leaf": 1
+ },
+ "XGBoost": {
+  "n_estimators": 500,
+  "max_depth": 5,
+  "learning_rate": 0.1,
+  "subsample": 0.8
+ }
+}

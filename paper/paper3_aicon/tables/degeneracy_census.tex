@@ -1,0 +1,26 @@
+% Sinh boi runners/make_paper3_tables.py -- dung sua tay.
+\begin{table}[t]
+\centering
+\caption{Degeneracy census. A model is degenerate on a run when it
+predicts the attack class for every test record, i.e.\ $\mathrm{TN}
+= \mathrm{FN} = 0$, checked directly on the predictions. Tuned rows
+use the $C$ selected once on the training split of run~1. The
+revision row is the RBF kernel at $N_{\text{train}} = 100$ with the
+$C$ tuned once on a separate set; no other model, size or arm of
+that protocol is degenerate.}
+\label{tab:degeneracy}
+\begin{tabular}{l@{\hskip 1.2em}l@{\hskip 1.4em}r@{\hskip 1.4em}r@{\hskip 1.2em}r}
+\toprule
+Protocol & Model & Selected $C$ & Degenerate & Runs \\
+\midrule
+tuned & Quantum (ZZ) & 0.01 & 5 & 5 \\
+ & SVM-linear & 0.1 & 1 & 5 \\
+ & SVM-poly2 & 0.1 & 1 & 5 \\
+ & SVM-RBF & 1 & 0 & 5 \\
+\addlinespace[2pt]
+tuned data, neutral $C$ & Quantum (ZZ) & 1 & 0 & 35 \\
+\addlinespace[2pt]
+revision, $N=100$ & SVM-RBF & 0.1 & 9 & 10 \\
+\bottomrule
+\end{tabular}
+\end{table}
